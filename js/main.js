@@ -120,17 +120,17 @@ function onHighlightSeats() {
       if (i === rowIdx && j === colIdx) continue
       if (j < 0 || j >= board[0].length) continue
       var currCell = board[i][j]
-      if (currCell.isSeat) {
+      if (currCell.isSeat && !currCell.isBooked) {
         console.log('Current:', currCell)
         console.log('i:', i, ' j:', j)
-        addHighlight({i,j})
+        addHighlight({ i, j })
       }
     }
   }
 }
 
 function addHighlight(pos) {
-  console.log('POS:',pos)
+  console.log('POS:', pos)
   //DOM
   var elSeat = document.querySelector(`[data-i="${pos.i}"][data-j="${pos.j}"]`)
   console.log('elSeat', elSeat)
