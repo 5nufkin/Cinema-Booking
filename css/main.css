@@ -1,0 +1,116 @@
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --seat-regular:#761818;
+  --seat-selected: orange;
+  --seat-booked: red;
+  --seat-booked-hover: gray;
+  --btn-maroon-light: #9d2424;
+  --btn-maroon-dark: #561212;
+  --popup-background: orange;
+}
+
+body {
+    background: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+  
+h1 {
+    text-align: center;
+}
+
+.cinema {
+    width: 600px;
+    margin: 60px auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.cell {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}
+.seat {
+    background-color: var(--seat-regular);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.selected {
+    background-color: var(--seat-selected);
+}
+.booked {
+    background-color: var(--seat-booked);
+}
+.seat.booked:hover {
+    background-color: var(--seat-booked-hover);
+    cursor: not-allowed;
+}
+
+.popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 210px;
+
+    background-color: var(--popup-background);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.popup .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.highlight{
+  border: 1px solid lime;
+  background-color: #ddd;
+  /* transition: 1s; */
+}
+
+.btn-book-seat{
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 8px;
+  border: 2px solid #561212;
+  background-color: #9d2424;
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.btn-book-seat:hover{
+  background-color: white;
+  color: #9d2424;
+  border-color: #9d2424;
+  cursor: pointer;
+}
+
+.btn-highlight-available{
+background-color: transparent;
+border: none;
+font-size: 20px;
+margin-left: 10px;
+cursor: pointer; 
+position: absolute;
+right: 15px;
+bottom: 68px;
+}
+
+.btn-highlight-available:hover{
+  font-size: 140%;
+}
